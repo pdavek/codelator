@@ -17,11 +17,10 @@ def explain_code(code):
     return response['choices'][0]['message']['content'].strip()
 
 
-st.markdown("<h1 style='text-align: center; color: #F0F0F0;'>Code to Plain English Translator</h1>", unsafe_allow_html=True)
-
+st.write("# Codelator")
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("<h3 style='color: #87CEEB;'>Enter Your Code</h3>", unsafe_allow_html=True)
-code_input = st.text_area("Paste your code here:", height=400, max_chars=2000, help="Insert the code you want to translate into plain English.")
+code_input = st.text_area("Paste your code here:", height=300, max_chars=5000, help="Insert the code you want to translate into plain English.")
 st.markdown("<br><br>", unsafe_allow_html=True)
 explanation = ""
 if st.button("Translate", key="translate_button", help="Click to translate the code"):
